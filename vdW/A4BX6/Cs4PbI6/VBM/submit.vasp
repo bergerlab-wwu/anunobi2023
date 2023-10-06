@@ -1,0 +1,25 @@
+# Sample parallel universe submit description
+
+# Stay only on InfiniBand or non-InfiniBand nodes
++WantParallelSchedulingGroups = True
+
+# Run only on InfniBand nodes
+Requirements = ParallelSchedulingGroup == "ib40_1"
+
+# Basic job attributes
+Executable = openmpiscript
+Arguments  = /cluster/research-groups/berger/vasp_std
+Universe   = parallel
+Getenv     = true
+Output     = o.$(NODE)
+Error      = e.$(NODE)
+Log        = log
+
+# This count must not exceed the total number of slots available
+# on hosts c-0-* and g-0-* (240 total), as mpi jobs will only run
+# on these hosts (not in the sit-down lab environment).
+machine_count = 8
+request_cpus = 1
+
+queue
+

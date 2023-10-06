@@ -1,0 +1,13 @@
+Charge density
+ISMEAR=0
+LORBIT=11       ! Tells VASP to write PROCAR, which isn't actually necessary.
+LWAVE = .TRUE.  ! Tells VASP to write WAVECAR.
+LCHARG = .TRUE. ! Tells VASP to write CHGCAR.
+PREC= Normal
+ENCUT = 450
+EDIFF=1E-6
+EDIFFG=-0.5E-3
+ISIF=3
+IBRION=2
+POTIM=0.25
+NSW = 1

@@ -1,0 +1,14 @@
+Valence band maximum
+LPARD=.TRUE.     ! This tells VASP to generate the PARCHG file.
+ISMEAR=0
+LWAVE = .FALSE.
+LCHARG = .FALSE.
+PREC= Normal
+ENCUT = 450
+EDIFF=1E-6
+EDIFFG=-0.5E-3
+ISIF=3
+IBRION=2
+POTIM=0.25
+IBAND=60        ! Find this based on the output of the first step.
+KPUSE=10        ! Find this based on the output of the first step.
